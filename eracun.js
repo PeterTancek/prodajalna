@@ -221,9 +221,11 @@ streznik.post('/prijava', function(zahteva, odgovor) {
     var outPrint = "";
     if(napaka2) {
       outPrint = "Registracija ni uspela, preverite podatke in poizkusite ponovno.";
+      odgovor.redirect('/prijava'); 
     } 
     else {
       outPrint = "Registracija uspešna.";
+      odgovor.redirect('/prijava'); 
     }
 
     
